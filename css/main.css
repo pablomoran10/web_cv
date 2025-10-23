@@ -1,0 +1,386 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center; /* Aquí está la clave */
+  display: block;
+  margin: 1rem auto 0.5rem auto;
+}
+
+
+
+/* Layout principal */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 1000;
+}
+.content {
+  margin-left: 250px; /* Para que no quede debajo */
+}
+
+.main-nav a.active {
+  color: #18bc9c;
+  font-weight: bold;
+  position: relative;
+}
+
+.main-nav a.active::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #18bc9c;
+  border-radius: 50%;
+}
+
+
+
+.logo-letter {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #18bc9c;
+}
+
+.role {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.main-nav {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.main-nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+.main-nav li {
+  margin: 1rem 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #18bc9c;
+}
+
+.social {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.social a.social-instagram:hover i.fab.fa-instagram {
+  color: #e4405f !important;
+  background: rgba(228,64,95,0.1);
+  border-radius: 50%;
+}
+
+.social a.social-linkedin:hover i.fab.fa-linkedin {
+  color: #0077b5 !important;
+  background: rgba(0,119,181,0.1);
+  border-radius: 50%;
+}
+
+/* Área de contenido */
+.content {
+  flex-grow: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hero */
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #18bc9c;
+}
+
+.subtitle {
+  color: #aaa;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #18bc9c;
+  color: #18bc9c;
+  background: transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #18bc9c;
+  color: #000;
+}
+
+
+section {
+  padding: 4rem;
+  border-bottom: 1px solid #333;
+}
+
+.mail {
+  font-size: 1.2rem;
+  color: #18bc9c;
+  text-decoration: none;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #18bc9c;
+}
+
+section p,
+section ul {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.content section {
+  min-height: 100vh;
+  padding: 4rem;
+  border-bottom: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://elements-resized.envatousercontent.com/elements-video-cover-images/files/261073161/code_1_loop_img.jpg?w=500&cf_fit=cover&q=85&format=auto&s=cb1f9b84d2d4b5cb644bfec1399a9707420758c2f0012fd5f68c8d171108e659'); /* Puedes usar tu propia imagen */
+  background-attachment: fixed;
+  filter: grayscale(100%);
+  opacity: 40%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  transition: width 2s ease-in-out;
+  border-radius: 5px;
+}
+
+/* Colores personalizables */
+.fill.html-css    { background-color: #e44d26; } /* Cambia luego si quieres */
+.fill.js          { background-color: #f0db4f; }
+.fill.vue-react   { background-color: #41b883; }
+.fill.php         { background-color: #8892be; }
+.fill.db          { background-color: #f29111; }
+
+.timeline {
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  border-left: 2px solid #18bc9c;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: #18bc9c;
+  border-radius: 50%;
+  border: 2px solid #111;
+}
+
+.timeline-content {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(24, 188, 156, 0.3);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.timeline-date {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.timeline-content p {
+  color: #ddd;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(24, 188, 156, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(24, 188, 156, 0.4);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 1rem;
+}
+
+.portfolio-info h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.portfolio-info p {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-info a {
+  color: #18bc9c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.portfolio-info a:hover {
+  text-decoration: underline;
+}
+
+.phone {
+  font-size: 1.2rem;
+  color: #18bc9c;
+  text-decoration: none;
+}
+.phone:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .content {
+    margin-left: 0;
+    padding: 2rem;
+  }
+}
