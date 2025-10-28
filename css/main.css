@@ -374,14 +374,92 @@ section ul li {
 
 /* Media Queries */
 
+/* Imágenes y medios fluidos */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajustes para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 2.8rem; }
+  .content { padding: 3rem; }
+}
+
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
     height: auto;
     position: relative;
   }
+  .main-nav ul {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .main-nav li {
+    margin: 0.5rem;
+  }
+  .main-nav a {
+    display: inline-block;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+  }
   .content {
     margin-left: 0;
     padding: 2rem;
+  }
+  .parallax {
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+  }
+  .content section {
+    min-height: auto;
+    padding: 2rem;
+  }
+  .portfolio-item img {
+    height: auto;
+  }
+  .timeline {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .cta-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  section {
+    padding: 1.5rem;
+  }
+  .content {
+    padding: 1.5rem;
+  }
+  .profile-photo {
+    width: 70px;
+    height: 70px;
+  }
+  .main-nav a {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+  .portfolio-grid {
+    gap: 1rem;
+  }
+  .parallax {
+    display: none;
   }
 }
