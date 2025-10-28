@@ -265,6 +265,7 @@ section ul li {
 .fill.vue-react   { background-color: #41b883; }
 .fill.php         { background-color: #8892be; }
 .fill.db          { background-color: #f29111; }
+.fill.android     { background-color: #3ddc84; }
 
 .timeline {
   position: relative;
